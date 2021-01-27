@@ -24,7 +24,6 @@ def validate():
             _json = request.get_json()
             app.logger.debug(f'data: {data}')
             app.logger.debug(f'json_request: {_json}')
-            # missing = [r for r in required.keys() if r not in _json]
             if list(_json.keys()) != keys:
                 return response("key error"), 400
             for key in _json.keys():

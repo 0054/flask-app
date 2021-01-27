@@ -137,7 +137,6 @@ def test_put():
             })
 
     requests.post(app_url + '/dictionary', data = test_data1, headers=headers )
-    # for i in range(2):
     res = requests.put(app_url + '/dictionary/key_put', data = test_data2, headers=headers )
     assert res.status_code == 200
     data = res.json()
