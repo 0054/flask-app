@@ -12,7 +12,7 @@ $ pip3 install -r requirements.txt
 ```
 make run-tests
 ```
-руками:
+руками:  
 запускаем flask app
 ```
 FLASK_ENV=development FLASK_DEBUG=True python3 app.py
@@ -32,7 +32,7 @@ make build
 make start-app
 ```
 
-## Запуск приложения
+## Остановка приложения
 ```
 make stop-app
 ```
