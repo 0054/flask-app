@@ -42,38 +42,6 @@ def validate():
     return decorator
         
 
-
-
-# def validate_dict(json_data):
-
-#     # проверка типа и длины
-#     app.logger.debug(json_data)
-#     if type(json_data) is not dict and len(json_data.keys()) != 2: 
-#         return False, 400
-
-#     # проверка ключей
-#     if set(list(json_data.keys())) != set(['key', 'value']): 
-#         app.logger.debug(json_data.keys())
-#         return False, 400
-
-#     # проверка наличия ключа в data
-#     app.logger.debug(data.get(json_data['key']))
-#     if json_data['key'] in data:
-#         app.logger.debug(json_data['key'])
-#         return False, 409
-
-#     # проверка на пустое значение
-#     for value in json_data.values():
-#         if value:
-#             app.logger.debug(f'value: "{value}"')
-#             continue
-#         else:
-#             app.logger.debug(f'value: "{value}"')
-#             return False, 400
-
-#     return True, 200
-
-
 @app.route('/dictionary/<key>')
 def get_dict(key):
     if key in data:
